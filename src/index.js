@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ErrorBoundary from './Util/ErrorBoundary';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <ErrorBoundary error="There is error">
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
+  //</ErrorBoundary> 
 );
 
 // If you want to start measuring performance in your app, pass a function
