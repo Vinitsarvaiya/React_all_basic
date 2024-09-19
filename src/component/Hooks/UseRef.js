@@ -11,9 +11,14 @@ const UseRef = () => {
     };
 
     useEffect(() => {
-        a.current = a.current + 1
-        console.log(`This is value of a=>${a.current}`)
+        // a.current = a.current + 1
+        console.log(`render things`)
     })
+
+    const Handleclick=()=>{
+        a.current = a.current +1
+        console.log(a.current)
+    }
 
     const Handlethis=()=>{
         refbtn.current.style.backgroundColor="red"
@@ -23,21 +28,23 @@ const UseRef = () => {
     }
     return (
         <div className='container' align="center" style={{ mystyle }}>
+            <button type="button" className='btn btn-success' onClick={()=>{setcount(count+1)}}>This button render</button>
             <div className="row">
                 <div className="col-12">
-                    <h1>{count}</h1>
-                    <button type="button" className='btn btn-success' onClick={() => { setcount(count + 1) }}>Click</button>
+                    <h1>{a.current}</h1>
+                    <button type="button" className='btn btn-success' onClick={Handleclick}>Click</button>
                 </div>
             </div>
             <hr />
             <div className="row">
                 <div className="col-12">
-                    <h1>{count}</h1>
+                    <h1>{a.current}</h1>
                     <div width="10px" ref={refbtn} style={{backgroundColor:"blue"}} >dd</div>
                     <button  type="button" className='btn btn-primary' onClick={Handlethis}>submit</button>
                     <button  type="button" className='btn btn-primary'  onClick={Handleback}>submit</button>
                 </div>
             </div>
+
         </div>
     )
 }

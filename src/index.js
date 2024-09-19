@@ -4,13 +4,19 @@ import { BrowserRouter} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ErrorBoundary from './Util/ErrorBoundary';
+// import ErrorBoundary from './Util/ErrorBoundary';
+import store from './Store';
+import { Provider } from 'react-redux';
+
+store.subscribe(()=>console.log(store.getState()));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <ErrorBoundary error="There is error">
   <BrowserRouter>
+  <Provider store={store}>
     <App />
+  </Provider>
   </BrowserRouter>
   //</ErrorBoundary> 
 );

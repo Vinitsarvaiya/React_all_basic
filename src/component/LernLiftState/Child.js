@@ -1,14 +1,11 @@
 import React from 'react'
+import Grandchild from './Grandchild'
 
 const Child = ({sendData}) => {
-    const Handlechange=(e)=>{
-        e.preventDefault()
-        let name="my name is ---"
-        sendData(name)
-    }
+    
   return (
     <div>
-      <button className='btn btn-warning' onClick={Handlechange}>Click</button>
+      <Grandchild grand={sendData}/>
     </div>
   )
 }

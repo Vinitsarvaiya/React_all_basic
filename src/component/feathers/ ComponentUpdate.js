@@ -11,6 +11,7 @@ export default class  ComponentUpdate extends Component {
         console.log("component update",preState,this.state.counter)
     }
   render() {
+    console.log("render")
     return (
       <div>
         <h1>{this.state.counter}</h1>

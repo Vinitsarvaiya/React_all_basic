@@ -35,6 +35,7 @@ class Child extends Component {
 
 
 //  constructor
-//  componentWillUnmount
 //  render
 //  componentdidUnmount
+//  render
+//  componentWillUnmount

@@ -36,7 +36,7 @@ const CrudAxios = () => {
             .then(() => {
                 console.log("created");
                 getData();
-                setFormData({ name: '', description: '' }); // Reset form
+                setFormData({ name: '', description: '' }); 
             })
             .catch(err => console.log(err));
     };

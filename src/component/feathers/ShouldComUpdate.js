@@ -9,7 +9,7 @@ export default class ShouldComUpdate extends Component {
     }
     shouldComponentUpdate(pP,pS){
         console.log("shouldComponentUpdate")
-        if(pS.count===this.state.count)
+        if(pS.count===5)
         {
             
             return false

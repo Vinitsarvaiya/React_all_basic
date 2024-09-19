@@ -38,6 +38,7 @@ import Login from './component/Login/Login';
 import Protected from './component/Login/Protected';
 import Logout from './component/Login/Logout';
 import CrudAxios from './component/Axios/CrudAxios';
+import ReduxCounter from './React-Redux/ReduxCounter';
 
 function App() {
   let initTodo;
@@ -88,43 +89,44 @@ function App() {
       <Provider>
         <Routes>
           <Route exact path="/" element={<Protected component={Body} todo={todos} ondelete={ondelete} addData={addData} />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/lift' element={<Parent onApp={getData} />} />
-        <Route path='/usestate' element={<UseStateHook />} />
-        <Route path="/useeffect" element={<UseEffectHook />}></Route>
-        <Route path="/useMemo" element={<UseMemoHook />}></Route>
-        <Route path="/useCallback" element={<UseCallbackHook />}></Route>
-        <Route path="/usecontext" element={<Receiver />}></Route>
-        <Route path="/useref" element={<UseRef />}></Route>
-        <Route path="/custome" element={<UseCustomeHook />}></Route>
-        <Route path="/map" element={<Map />}></Route>
-        <Route path='/modulecss' element={<ModuleCss />}></Route>
-        <Route path='/form' element={<FormHandler />}></Route>
-        <Route path='/lifecycle' element={<LifeCycle />}></Route>
-        <Route path='/willanmount' element={<ComponentWill />}></Route>
-        <Route path='/didupdate' element={<ComponentUpdate />}></Route>
-        <Route path='/drivedstpr' element={<DerivedStFromPr />}></Route>
-        <Route path="/snapshot" element={<SnapshotBeforeUpdate />}></Route>
-        <Route path="/shouldupdate" element={<ShouldComUpdate />}></Route>
-        <Route path="/usereducer" element={<UseReducer />}></Route>
-        <Route path="/todoreducer" element={<UseReducerTodo />}></Route>
-        {/* <Route path="/*" element={<Navigate to="/about" />}></Route> */}
-        <Route path="/user/:name" element={<User />}></Route>
-        <Route path="/filter" element={<Filter />}></Route>
-        <Route path="/navigate" element={<UseNavigate />}></Route>
-        <Route path="/outlet/" element={<Outelet />}>
-          <Route path="comapny" element={<Company />}></Route>
-          <Route path="gov" element={<Gov />}></Route>
-          <Route path="worldgov" element={<WorldGov />}></Route>
-        </Route>
-        <Route path="/uselocation" element={<UseLocation />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/logout" element={<Logout />}></Route>
-        <Route path="/axios" element={<CrudAxios/>}></Route>
-        <Route path="/*" element={<Page404/>}></Route>
-      </Routes>
-    </Provider>
-      {/* <Footer /> */ }
+          <Route path='/about' element={<About />} />
+          <Route path='/lift' element={<Parent onApp={getData} />} />
+          <Route path='/usestate' element={<UseStateHook />} />
+          <Route path="/useeffect" element={<UseEffectHook />}></Route>
+          <Route path="/useMemo" element={<UseMemoHook />}></Route>
+          <Route path="/useCallback" element={<UseCallbackHook />}></Route>
+          <Route path="/usecontext" element={<Receiver />}></Route>
+          <Route path="/useref" element={<UseRef />}></Route>
+          <Route path="/custome" element={<UseCustomeHook />}></Route>
+          <Route path="/map" element={<Map />}></Route>
+          <Route path='/modulecss' element={<ModuleCss />}></Route>
+          <Route path='/form' element={<FormHandler />}></Route>
+          <Route path='/lifecycle' element={<LifeCycle />}></Route>
+          <Route path='/willanmount' element={<ComponentWill />}></Route>
+          <Route path='/didupdate' element={<ComponentUpdate />}></Route>
+          <Route path='/drivedstpr' element={<DerivedStFromPr />}></Route>
+          <Route path="/snapshot" element={<SnapshotBeforeUpdate />}></Route>
+          <Route path="/shouldupdate" element={<ShouldComUpdate />}></Route>
+          <Route path="/usereducer" element={<UseReducer />}></Route>
+          <Route path="/todoreducer" element={<UseReducerTodo />}></Route>
+          {/* <Route path="/*" element={<Navigate to="/about" />}></Route> */}
+          <Route path="/user/:name" element={<User />}></Route>
+          <Route path="/filter" element={<Filter />}></Route>
+          <Route path="/navigate" element={<UseNavigate />}></Route>
+          <Route path="/outlet/" element={<Outelet />}>
+            <Route path="comapny" element={<Company />}></Route>
+            <Route path="gov" element={<Gov />}></Route>
+            <Route path="worldgov" element={<WorldGov />}></Route>
+          </Route>
+          <Route path="/uselocation" element={<UseLocation />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/logout" element={<Logout />}></Route>
+          <Route path="/axios" element={<CrudAxios />}></Route>
+          <Route path="/redux" element={<ReduxCounter/>}></Route>
+          <Route path="/*" element={<Page404 />}></Route>
+        </Routes>
+      </Provider>
+      {/* <Footer /> */}
     </div >
   );
 }

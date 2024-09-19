@@ -18,17 +18,17 @@ export default class DerivedStFromPr extends Component {
 }
 
 class Child extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             current:0
         }
     }
 
-    static getDerivedStateFromProps(props,state){
-        console.log("getdrivedstatefromprops",props,state)
+    static getDerivedStateFromProps(nextprops,prestate){
+        console.log("getdrivedstatefromprops",nextprops,prestate)
         return{
-            current:props.data
+            current:nextprops.data
         };
     }
   render() {
@@ -36,6 +36,7 @@ class Child extends Component {
     return (
       <div>
         <p>{this.props.data}</p>
+        {this.state.current}
       </div>
     )
   }

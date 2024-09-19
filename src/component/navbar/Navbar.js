@@ -63,9 +63,9 @@ export default function Navbar(props) {
             router
           </a>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/user/vinit">vinit</Link></li>
-            <li><Link className="dropdown-item" to="/user/kartik">kartik</Link></li>
-            <li><Link className="dropdown-item" to="/filter">Filter</Link></li>
+            <li><Link className="dropdown-item" to="/user/vinit">vinit (useParams)</Link></li>
+            <li><Link className="dropdown-item" to="/user/kartik">kartik( useParams)</Link></li>
+            <li><Link className="dropdown-item" to="/filter">Filter (useSearchParams)</Link></li>
             <li><Link className="dropdown-item" to="/navigate">useNavigate</Link></li>
             <li><Link className="dropdown-item" to="/outlet">Outlet</Link></li>
             <li><Link className="dropdown-item" to="/uselocation">UseLocation</Link></li>
@@ -73,6 +73,9 @@ export default function Navbar(props) {
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/axios">Axios</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/redux">Redux</Link>
         </li>
       </ul>
       {props.searchbar?
