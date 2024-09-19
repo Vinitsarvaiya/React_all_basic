@@ -39,6 +39,8 @@ import Protected from './component/Login/Protected';
 import Logout from './component/Login/Logout';
 import CrudAxios from './component/Axios/CrudAxios';
 import ReduxCounter from './React-Redux/ReduxCounter';
+import Session from './component/storageSession/Session';
+import LocalStorage from './component/storageSession/Localstorage';
 
 function App() {
   let initTodo;
@@ -123,6 +125,8 @@ function App() {
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/axios" element={<CrudAxios />}></Route>
           <Route path="/redux" element={<ReduxCounter/>}></Route>
+          <Route path="/session" element={<Session/>}></Route>
+          <Route path="/localstorage" element={<LocalStorage/>}></Route>
           <Route path="/*" element={<Page404 />}></Route>
         </Routes>
       </Provider>

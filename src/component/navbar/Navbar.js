@@ -77,6 +77,15 @@ export default function Navbar(props) {
         <li className="nav-item">
           <Link className="nav-link" to="/redux">Redux</Link>
         </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Storage
+          </a>
+          <ul className="dropdown-menu">
+            <li><Link className="dropdown-item" to="/session">session</Link></li>
+            <li><Link className="dropdown-item" to="/localstorage">localStorage</Link></li>
+          </ul>
+        </li>
       </ul>
       {props.searchbar?
       <li className="d-flex">
