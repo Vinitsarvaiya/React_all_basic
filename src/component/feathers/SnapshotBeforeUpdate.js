@@ -36,6 +36,7 @@ class Home extends Component {
         return preS.current*10;
     }
   render() {
+    console.log("render")
     return (
       <div>
         <p>{this.state.current}</p>

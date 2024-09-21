@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useState,useEffect } from 'react';
 
 const UseEffectHook = () => {
@@ -22,15 +22,21 @@ const UseEffectHook = () => {
     },[]) 
     
     useEffect(()=>{
-        console.log("useEffect called!")
+        console.log("useEffect called!" ,counter)
         return(()=>{
-            console.log("return called!")
+            console.log("return called!",counter)
         })
+    },[counter])
+
+
+    let iseual = useMemo(()=>{
+        console.log("use memo" ,counter)    
+        return 1
     },[counter])
     return (
         <div>
             <div className='container' align="center" style={mystyle}>
-                <h1>Number : {counter}</h1>
+                <h1>Number : {counter} {iseual}</h1>
                 <hr />
                 <div className="row">
                     <div className="col-12">

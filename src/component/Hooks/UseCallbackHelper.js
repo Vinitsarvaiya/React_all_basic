@@ -1,13 +1,14 @@
-import React from 'react'
-import { memo } from 'react'
+import React from 'react';
+import { memo } from 'react';
 
-const UseCallbackHelper = ({number}) => {
-    console.log("usecallback--helper")
+const UseCallbackHelper = memo(({ superhook }) => {
+    console.log("usecallback--helper");
+    const number = superhook(); // Call the superhook to get the current number
     return (
-    <div>
-      <h1>{number}</h1>
-    </div>
-  )
-}
+        <div>
+            <h1>Number: {number}</h1>
+        </div>
+    );
+});
 
-export default memo(UseCallbackHelper)
+export default UseCallbackHelper;

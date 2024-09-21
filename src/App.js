@@ -41,6 +41,10 @@ import CrudAxios from './component/Axios/CrudAxios';
 import ReduxCounter from './React-Redux/ReduxCounter';
 import Session from './component/storageSession/Session';
 import LocalStorage from './component/storageSession/Localstorage';
+import Combine from './component/Hoc/Combine';
+import Counter from './component/Hooks/UseContext/HocTest/Counter';
+import NormalCss from './component/feathers/NormalCss';
+import UseCallbackExample from './component/Hooks/UseCallbackExample';
 
 function App() {
   let initTodo;
@@ -127,6 +131,10 @@ function App() {
           <Route path="/redux" element={<ReduxCounter/>}></Route>
           <Route path="/session" element={<Session/>}></Route>
           <Route path="/localstorage" element={<LocalStorage/>}></Route>
+          <Route path="/hoc" element={<Combine/>}></Route>
+          <Route path="/hoctest" element={<Counter/>}></Route>
+          <Route path="/normalcss" element={<NormalCss/>}></Route>
+          <Route path='/useCallbackexample' element={<UseCallbackExample/>}></Route>
           <Route path="/*" element={<Page404 />}></Route>
         </Routes>
       </Provider>

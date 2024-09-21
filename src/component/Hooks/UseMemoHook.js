@@ -24,11 +24,7 @@ const UseMemoHook = () => {
 
     const isequal=useMemo(()=>{
         console.log("isequal called")
-        if(number === 10)
-        {
-            return "yes"
-        }
-            return "no";
+        return number % 2 == 0
     },[number])
 
     return (
@@ -44,7 +40,8 @@ const UseMemoHook = () => {
                 <hr />
             </div>
             <div className='container' align="center" style={mystyle}>
-                <h1>is {number} is equal to 10 --{isequal}</h1>
+                {console.log(isequal)}
+                <h1>is {number} is equal to 10 --{isequal?"yes":"no"}</h1>
                 <hr />
                 <div className="row">
                     <div className="col-12">
